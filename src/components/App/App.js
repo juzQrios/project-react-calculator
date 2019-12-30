@@ -1,7 +1,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
-import Display from './Display';
-import ButtonPanel from './ButtonPanel';
+import Display from '../Display/Display';
+import ButtonPanel from '../ButtonPanel/ButtonPanel';
 
 class App extends React.Component {
   render() {
