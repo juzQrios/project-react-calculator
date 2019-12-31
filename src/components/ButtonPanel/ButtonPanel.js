@@ -1,5 +1,6 @@
 import React from 'react';
-import Button from './Button';
+import './ButtonPanel.css';
+import Button from '../Button/Button';
 
 class ButtonPanel extends React.PureComponent {
   render() {
@@ -8,7 +9,7 @@ class ButtonPanel extends React.PureComponent {
       'group-2': ['7', '8', '9', 'X'],
       'group-3': ['4', '5', '6', '-'],
       'group-4': ['1', '2', '3', '+'],
-      'group-5': ['0', '.', '+', ''],
+      'group-5': ['0', '.', '=', ''],
     };
 
     return (
@@ -16,10 +17,17 @@ class ButtonPanel extends React.PureComponent {
       <div className="ButtonPanel">
         {
           Object.keys(buttonNames).map(groupName => (
-            <div id={groupName} key={groupName}>
+            <div id={groupName} className="group" key={groupName}>
               {
                 buttonNames[groupName].map(buttonName => (
-                  buttonName ? <Button name={buttonName} key={buttonName} /> : ''
+                  buttonName ? (
+                    <Button
+                      name={buttonName}
+                      key={buttonName}
+                      wide={buttonName === '0'}
+                      color={['÷', 'X', '-', '+', '='].includes(buttonName) ? 'orange' : 'light-gray'}
+                    />
+                  ) : ''
                 ))
               }
             </div>

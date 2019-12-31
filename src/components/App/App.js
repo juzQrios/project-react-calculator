@@ -1,12 +1,13 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
-import Display from './Display';
-import ButtonPanel from './ButtonPanel';
+import './App.css';
+import Display from '../Display/Display';
+import ButtonPanel from '../ButtonPanel/ButtonPanel';
 
 class App extends React.Component {
   render() {
     return (
-      <div id="App" className="App">
+      <div className="App">
         <Display />
         <ButtonPanel />
       </div>
