@@ -9,7 +9,7 @@ class ButtonPanel extends React.PureComponent {
       'group-2': ['7', '8', '9', 'X'],
       'group-3': ['4', '5', '6', '-'],
       'group-4': ['1', '2', '3', '+'],
-      'group-5': ['0', '.', '+', ''],
+      'group-5': ['0', '.', '=', ''],
     };
 
     return (
@@ -25,7 +25,7 @@ class ButtonPanel extends React.PureComponent {
                       name={buttonName}
                       key={buttonName}
                       wide={buttonName === '0'}
-                      color={['÷', 'X', '-', '+'].includes(buttonName) ? 'orange' : 'light-gray'}
+                      color={['÷', 'X', '-', '+', '='].includes(buttonName) ? 'orange' : 'light-gray'}
                     />
                   ) : ''
                 ))
