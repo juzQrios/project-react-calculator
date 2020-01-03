@@ -19,13 +19,21 @@ const operate = (numberOne, numberTwo, operation) => {
       total = Big(numberOne).times(Big(numberTwo));
       break;
     case '÷':
-      total = Big(numberOne).div(Big(numberTwo));
-      break;
+      if (numberTwo !== 0) {
+        total = Big(numberOne).div(Big(numberTwo));
+        break;
+      } else {
+        return "Can't divide by zero";
+      }
     case '%':
-      total = Big(numberOne).mod(Big(numberTwo));
-      break;
+      if (numberTwo !== 0) {
+        total = Big(numberOne).mod(Big(numberTwo));
+        break;
+      } else {
+        return "Can't divide by zero";
+      }
     default:
-      throw new Error('unidentified operation');
+      throw new Error('Unidentified operation');
   }
   return Number(total);
 };

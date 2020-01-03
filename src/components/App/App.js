@@ -6,13 +6,28 @@ import Display from '../Display/Display';
 import ButtonPanel from '../ButtonPanel/ButtonPanel';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+  }
+
+  handleClick = (buttonName) => {
+    this.setState((state) => {
+      const { total, next, operation } = state;
+      return calculate({ total, next, operation }, buttonName);
+    });
+  }
+
   render() {
-    const calculatorData = { total: null, next: null, operation: null };
-    const { total, next } = calculate(calculatorData, '0');
+    const { total, next } = this.state;
     return (
       <div className="App">
-        <Display result={total || next} />
-        <ButtonPanel />
+        <Display result={String(next || total || 0)} />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }

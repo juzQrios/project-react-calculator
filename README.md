@@ -1,10 +1,8 @@
 # Project React Calculator
 
-> A simple React application.
+> A very simple React application.
 
-`Add a screenshot of application here`
-
-Additional description about the project and its features.
+![Application Screenshot](./screenshot.png)
 
 ## Built With
 
@@ -12,7 +10,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://project-react-calculator-96.herokuapp.com/)
+[Live on Heroku](https://project-react-calculator-96.herokuapp.com/)
 
 ## Getting Started
 
@@ -37,30 +35,15 @@ Install dependencies
 npm install
 ```
 
-## Available Scripts
+## Start local server
 
-In the project directory, you can run:
+In the project directory, run:
 
-### `yarn start`
+```bash
+npm start
+```
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+View the application at [`http://localhost:3000`](http://localhost:3000)
 
 ## Authors
 
@@ -68,8 +51,9 @@ Your app is ready to be deployed!
 
 - Github: [@juzQrios](https://github.com/juzQrios)
 
-## Acknowledgments
+## Reviewers
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+> Additional support from [Microverse](https://www.microverse.org/) team.
+
+- [Bola Ahmed Buari](https://github.com/bolah2009)
+- [SHEY Louis Chia](https://github.com/shloch)
