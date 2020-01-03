@@ -1,8 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ButtonPanel.css';
 import Button from '../Button/Button';
 
 class ButtonPanel extends React.PureComponent {
+  handleClick = (buttonName) => {
+    const { clickHandler } = this.props;
+    return clickHandler(buttonName);
+  };
+
   render() {
     const buttonNames = {
       'group-1': ['AC', '+/-', '%', '÷'],
@@ -26,6 +32,7 @@ class ButtonPanel extends React.PureComponent {
                       key={buttonName}
                       wide={buttonName === '0'}
                       color={['÷', 'X', '-', '+', '='].includes(buttonName) ? 'orange' : 'light-gray'}
+                      clickHandler={this.handleClick}
                     />
                   ) : ''
                 ))
@@ -37,5 +44,9 @@ class ButtonPanel extends React.PureComponent {
     );
   }
 }
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;
