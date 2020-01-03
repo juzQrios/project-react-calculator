@@ -1,0 +1,8 @@
+.ButtonPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  height: 100px;
+}
